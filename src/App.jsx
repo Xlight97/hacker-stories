@@ -1,11 +1,27 @@
-import React from "react";
+import React from 'react';
 
-const title = "React";
+const quote = 'React is AWESOME!';
+const user = {
+  name: 'Aldo',
+  dogs: ['Putih', 'Pupi', 'Bruno', 'Mochi'],
+};
+const { name, dogs } = user;
 
 function App() {
   return (
     <div>
-      <h1>Hello React</h1>
+      <h1>
+        {name} is here and {quote}
+      </h1>
+
+      <ol>
+        {dogs.map((e, i) => (
+          <li key={i}>{e}</li>
+        ))}
+      </ol>
+
+      <label htmlFor="search">Search: </label>
+      <input type="text" id="search" />
     </div>
   );
 }
