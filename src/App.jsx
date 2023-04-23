@@ -1,5 +1,3 @@
-import React from 'react';
-
 const quote = 'React is AWESOME!';
 const user = {
   name: 'Aldo',
